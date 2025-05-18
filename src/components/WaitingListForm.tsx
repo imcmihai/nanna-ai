@@ -53,111 +53,25 @@ const WaitingListForm: React.FC<WaitingListFormProps> = ({ onClose }) => {
   }
 
   return (
-    <div>
-      <div className="flex justify-between items-center mb-6">
-        <h3 className="text-2xl font-bold text-gray-900">Join Our Waiting List</h3>
-        <button 
-          onClick={onClose}
-          className="text-gray-500 hover:text-gray-700 transition-colors"
-        >
-          <X className="h-5 w-5" />
-        </button>
-      </div>
-      
-      <form onSubmit={handleSubmit}>
-        <div className="space-y-4">
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-              Email address <span className="text-red-500">*</span>
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
-              placeholder="you@example.com"
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-              Full name <span className="text-red-500">*</span>
-            </label>
-            <input
-              id="name"
-              name="name"
-              type="text"
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
-              placeholder="John Doe"
-              value={formData.name}
-              onChange={handleChange}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-1">
-              Company
-            </label>
-            <input
-              id="company"
-              name="company"
-              type="text"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
-              placeholder="Company name (optional)"
-              value={formData.company}
-              onChange={handleChange}
-            />
-          </div>
-          
-          <div>
-            <label htmlFor="howHeard" className="block text-sm font-medium text-gray-700 mb-1">
-              How did you hear about us?
-            </label>
-            <select
-              id="howHeard"
-              name="howHeard"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow"
-              value={formData.howHeard}
-              onChange={handleChange}
-            >
-              <option value="">Select an option</option>
-              <option value="social">Social Media</option>
-              <option value="friend">Friend/Colleague</option>
-              <option value="search">Search Engine</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-          
-          <div className="flex items-start">
-            <input
-              id="acceptTerms"
-              name="acceptTerms"
-              type="checkbox"
-              required
-              className="mt-1 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
-              checked={formData.acceptTerms}
-              onChange={handleChange}
-            />
-            <label htmlFor="acceptTerms" className="ml-2 block text-sm text-gray-700">
-              I agree to receive updates about the product and accept the <a href="#" className="text-blue-600 hover:underline">privacy policy</a>
-            </label>
-          </div>
-        </div>
-        
-        <div className="mt-6">
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium shadow-md hover:shadow-lg"
-          >
-            Join Waiting List
-          </button>
-        </div>
-      </form>
-    </div>
+    <div style={{ width: '100%', maxWidth: '640px', margin: '0 auto' }}>
+    <button 
+             onClick={onClose}
+             className="text-gray-500 hover:text-gray-700 transition-colors"
+           >
+             <X className="h-5 w-5" />
+           </button>
+       <iframe
+         src="https://docs.google.com/forms/d/e/1FAIpQLSe2_F5qYh02UNMQhGdmMtRyiICTVWylmqowq9qKPmR_C3fQTA/viewform?embedded=true"
+         width="100%"
+         height="583"
+         style={{ border: 'none' }}
+         marginHeight={0}
+         marginWidth={0}
+         title="Google Form"
+       >
+         Loading…
+       </iframe>
+     </div>
   );
 };
 
